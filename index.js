@@ -66,6 +66,7 @@ class Comment {
             let text = document
                 .querySelector(`[data-inner-comment-text-area-id="${id}"]`)
                 .value.trim();
+            if (text === "") return;
             for (let i = 0; i < this.#comments.length; i++) {
                 if (this.#comments[i]["id"] === id) {
                     let newCommentThread = [
