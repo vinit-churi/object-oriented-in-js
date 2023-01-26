@@ -91,7 +91,7 @@ textarea {
 }
 
 .style-5 {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: calc(100vh - 250px);
 }
 .style-5::-webkit-scrollbar-track {
