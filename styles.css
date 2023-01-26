@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    justify-content: center;
+    padding-top: 200px;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.discussion {
+    background-color: rgb(188, 226, 213);
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    margin: 0 auto;
+}
+.discussion textarea {
+    width: 700px;
+    height: 60px;
+    resize: none;
+    padding: 10px;
+}
+.discussion .main-textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discussion .main-textarea .addComment {
+    width: max-content;
+    padding: 5px 15px;
+    background-color: rgb(127, 204, 255);
+}
+.upvoteBtn,
+.replyBtn,
+.deleteBtn {
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.deleteBtn {
+    float: right;
+}
+.upvoteBtn {
+    position: relative;
+}
+.upvoteBtn::after {
+    /* content: ""; */
+    content: attr(data-upvote-count);
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+textarea {
+    display: block;
+}
+
+.insertReplyContainer,
+.innerCommentEl {
+    width: 70%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.innerCommentEl::before {
+    content: "==> ";
+    display: inline-block;
+}
+.insertReplyContainer button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.insertReplyContainer textarea {
+    width: 100%;
+}
