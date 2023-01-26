@@ -116,3 +116,8 @@ textarea {
         to(transparent)
     );
 }
+textarea#mainTextArea {
+    min-height: 60px;
+    resize: none;
+    margin-right: 10px;
+}
